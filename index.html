@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Completeit</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Great+Vibes" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Merienda" rel="stylesheet">
+    <link href="dist/css/index.css" rel="stylesheet" type="text/css">
+</head>
+
+<body style="background-image: url('dist/img/luis.jpg');background-repeat: no-repeat;background-size: 100%;">
+    <nav class="w-100 bg-light border-bottom border-info d-flex flex-row">
+        <div class="w-25  rounded">
+            <p class="font-weight-bold mt-auto mb-auto w-50 ml-auto mr-auto text-info " style="font-family: 'Merienda', cursive; font-size: 30px;">PGalras</p>
+        </div>
+        <div id="form" class="d-flex flex-row ml-auto mr-4">
+            <p class="mt-1 mb-1 btn btn-info mr-auto ml-auto" onclick="change('sup')">Signup</p>
+            <p class="mt-1 mb-1 btn btn-dark border-left border-secondary ml-auto mr-auto" onclick="change('lin')">Login</p>
+        </div>
+    </nav>
+
+
+    <section class="d-flex flex-row mt-5 mb-auto">
+        <div id="signup" class="d-flex flex-column w-50 rounded border bg-light mauto">
+
+            <div class="border w-100">
+                <p class=" ml-auto mr-auto text-info font-weight-bold mb-auto mt-auto text-center">SignUp</p>
+            </div>
+            <div class="w-75 d-flex flex-column  ml-auto mr-auto mt-3">
+                <div class="d-flex flex-row">
+                    <input id="first_name" type="text" name="" value="" class="form-control wi_45 mb-2 mt-2" placeholder="First Name">
+                    <input id="last_name" type="text" name="" value="" class="form-control wi_45  mb-2 mt-2 ml-auto" placeholder="Last Name">
+
+
+                </div>
+                <p id="errn" style="font-size: 12px;color: rgb(255, 8, 0);opacity: 0.6;"></p>
+                <input id="emailid" type="text" name="" value="" class="form-control " placeholder="EmailID">
+                <p id="errem" style="font-size: 12px;color: rgb(255, 8, 0);opacity: 0.6;"></p>
+                <div class="d-flex flex-row">
+                    <input id="Password" type="password" name="" value="" class="form-control wi_45" placeholder="Password">
+                    <input id="RPassword" type="password" name="" value="" class="form-control wi_45   ml-auto" placeholder="Retype password">
+                </div>
+                <p id="errpass" style="font-size: 12px;color: rgb(255, 8, 0);opacity: 0.6;"></p>
+                <button type="" class="btn btn-info" onclick="signup()"> Signup</button>
+            </div>
+
+            <div class=" w-50 d-flex flex-row text-dark ml-auto mr-auto mt-4">
+
+                <p id="or" class=" ml-auto mr-auto  font-weight-bold mb-auto mt-auto">Or</p>
+
+            </div>
+            <div class="mt-2 w-50 d-flex flex-column text-dark ml-auto mr-auto mt-3 mb-3">
+
+                <button class="btn btn-light border font-weight-bold text-danger border-danger"> <i class="fab fa-google ml-auto mr-auto text-danger bg-light" style="font-size: 20px;"></i> Google</button>
+                <button class="btn btn-light border font-weight-bold text-info border-primary mt-1"> <i class="fab fa-facebook ml-auto mr-auto text-info"></i> Facebook</button>
+            </div>
+
+        </div>
+        <div id="login" class="d-flex forward flex-column w-50 rounded border bg-light ">
+            <div class="border w-100">
+                <p class=" ml-auto mr-auto text-info font-weight-bold mb-auto mt-auto text-center">Login</p>
+            </div>
+            <div class="w-75 d-flex flex-column  ml-auto mr-auto mt-3">
+                <input type="text" name="" value="" class="form-control  mb-2 mt-2" placeholder="EmailID">
+                <input type="password" name="" value="" class="form-control mb-2 mt-2 rounded" placeholder="Enter password">
+
+
+                <button type="" class="btn btn-info mt-2">Login</button>
+            </div>
+            <div class=" w-50 d-flex flex-row text-dark ml-auto mr-auto">
+
+                <p id="or" class=" ml-auto mr-auto  font-weight-bold mb-auto mt-4">Or</p>
+
+            </div>
+            <div class="mt-2 w-50 d-flex flex-column text-dark ml-auto mr-auto mb-3 mt-3">
+
+                <button class="btn btn-light border font-weight-bold text-danger border-danger"> <i class="fab fa-google ml-auto mr-auto text-danger bg-light" style="font-size: 20px;"></i> Google</button>
+                <button class="btn btn-light border font-weight-bold text-info border-primary mt-1"> <i class="fab fa-facebook ml-auto mr-auto text-info"></i> Facebook</button>
+            </div>
+        </div>
+    </section>
+
+
+    <footer class="w-100 bg-dark border-top border-info">
+        <div class="w-100 d-flex flex-row ml-auto mr-auto text-light container mt-2">
+            <p class="ml-auto mr-auto">Contact us on</p>
+
+        </div>
+        <div id="icons" class="centerme d-flex flex-row ml-auto mr-auto mt-auto mb-auto text-light">
+            <i class="fab fa-facebook-square ml-auto mr-auto"></i>
+            <i class="fab fa-linkedin  ml-auto mr-auto"></i>
+            <i class="fab fa-github-square  ml-auto mr-auto"></i>
+            <i class="fab fa-twitter-square  ml-auto mr-auto"></i>
+
+        </div>
+        <div class=" d-flex flex-row ml-auto mr-auto mt-auto mb-auto text-light container">
+            <p class="ml-auto mr-auto">Copyrights: Himanshu Joshi</p>
+        </div>
+
+    </footer>
+
+
+
+
+
+    <script src="https://www.gstatic.com/firebasejs/5.2.0/firebase.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+
+    <script src="dist/js/index.js" charset="utf-8">
+    </script>
+</body>
+
+</html>

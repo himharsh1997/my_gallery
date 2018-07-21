@@ -1,0 +1,18 @@
+input#search_i {
+    border-color: transparent;
+    width: auto;
+}
+
+div#search {
+    width: 15%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+i#se_icon {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
