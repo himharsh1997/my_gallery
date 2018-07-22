@@ -1,180 +1,40 @@
-[debug] [2018-07-18T14:23:35.364Z] ----------------------------------------------------------------------
-[debug] [2018-07-18T14:23:35.368Z] Command:       /usr/local/bin/node /usr/local/bin/firebase deploy
-[debug] [2018-07-18T14:23:35.368Z] CLI Version:   3.19.3
-[debug] [2018-07-18T14:23:35.368Z] Platform:      linux
-[debug] [2018-07-18T14:23:35.368Z] Node Version:  v10.0.0
-[debug] [2018-07-18T14:23:35.368Z] Time:          Wed Jul 18 2018 19:53:35 GMT+0530 (IST)
-[debug] [2018-07-18T14:23:35.368Z] ----------------------------------------------------------------------
+[debug] [2018-07-22T10:31:47.107Z] ----------------------------------------------------------------------
+[debug] [2018-07-22T10:31:47.109Z] Command:       /usr/local/bin/node /usr/local/bin/firebase serve
+[debug] [2018-07-22T10:31:47.110Z] CLI Version:   3.19.3
+[debug] [2018-07-22T10:31:47.110Z] Platform:      linux
+[debug] [2018-07-22T10:31:47.110Z] Node Version:  v10.0.0
+[debug] [2018-07-22T10:31:47.110Z] Time:          Sun Jul 22 2018 16:01:47 GMT+0530 (IST)
+[debug] [2018-07-22T10:31:47.110Z] ----------------------------------------------------------------------
 [debug] 
-[debug] [2018-07-18T14:23:35.379Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
-[debug] [2018-07-18T14:23:35.379Z] > authorizing via signed-in user
-[debug] [2018-07-18T14:23:35.382Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
-[debug] [2018-07-18T14:23:35.382Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+[debug] [2018-07-22T10:31:47.148Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2018-07-22T10:31:47.149Z] > authorizing via signed-in user
+[debug] [2018-07-22T10:31:47.151Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2018-07-22T10:31:47.151Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
  { refresh_token: '1/AjLOvF4jp69hhAqVsjci5QXm92EKOvah8koVH1Xybxo',
   client_id: '563584335869-fgrhgmd47bqnekij5i8b5pr03ho849e6.apps.googleusercontent.com',
   client_secret: 'j9iVZfS8kkCEFUPaAeJV0sAi',
   grant_type: 'refresh_token',
   scope: 'email https://www.googleapis.com/auth/cloud-platform https://www.googleapis.com/auth/cloudplatformprojects.readonly https://www.googleapis.com/auth/firebase openid' } 
- Wed Jul 18 2018 19:53:35 GMT+0530 (IST)
-[debug] [2018-07-18T14:23:36.578Z] <<< HTTP RESPONSE 200
-[debug] [2018-07-18T14:23:36.642Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/make-photo-gallery  
+ Sun Jul 22 2018 16:01:47 GMT+0530 (IST)
+[debug] [2018-07-22T10:31:50.121Z] <<< HTTP RESPONSE 200
+[debug] [2018-07-22T10:31:50.173Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/make-photo-gallery  
   
- Wed Jul 18 2018 19:53:36 GMT+0530 (IST)
-[debug] [2018-07-18T14:23:38.741Z] <<< HTTP RESPONSE 200
-[debug] [2018-07-18T14:23:38.742Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/make-photo-gallery/tokens  
+ Sun Jul 22 2018 16:01:50 GMT+0530 (IST)
+[debug] [2018-07-22T10:32:02.664Z] <<< HTTP RESPONSE 200
+[debug] [2018-07-22T10:32:02.666Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/make-photo-gallery/tokens  
   
- Wed Jul 18 2018 19:53:38 GMT+0530 (IST)
-[debug] [2018-07-18T14:23:40.505Z] <<< HTTP RESPONSE 200
-[info] 
-[info] === Deploying to 'make-photo-gallery'...
-[info] 
-[info] i  deploying database, hosting
-[info] i  database: checking rules syntax...
-[debug] [2018-07-18T14:23:43.101Z] >>> HTTP REQUEST PUT https://make-photo-gallery.firebaseio.com/.settings/rules.json?dryRun=true  
- {
-  "rules": {
-    ".read": "auth != null",
-    ".write": "auth != null"
-  }
-}
- 
- Wed Jul 18 2018 19:53:43 GMT+0530 (IST)
-[debug] [2018-07-18T14:23:47.048Z] <<< HTTP RESPONSE 200
-[info] ✔  database: rules syntax for database make-photo-gallery is valid
-[info] i  hosting: preparing . directory for upload...
-[debug] [2018-07-18T14:23:49.087Z] >>> HTTP REQUEST PUT https://deploy.firebase.com/v1/hosting/make-photo-gallery/uploads/-LHhlcYG9FFgJWpVp54w?fileCount=23&message=  
+ Sun Jul 22 2018 16:02:02 GMT+0530 (IST)
+[debug] [2018-07-22T10:32:07.433Z] <<< HTTP RESPONSE 200
+[debug] [2018-07-22T10:32:07.435Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/make-photo-gallery  
   
- Wed Jul 18 2018 19:53:49 GMT+0530 (IST)
-[debug] [2018-07-18T14:27:05.942Z] Error: socket hang up
-    at createHangUpError (_http_client.js:312:15)
-    at TLSSocket.socketOnEnd (_http_client.js:405:23)
-    at TLSSocket.emit (events.js:187:15)
-    at TLSSocket.EventEmitter.emit (domain.js:442:20)
-    at endReadableNT (_stream_readable.js:1091:14)
-    at process._tickCallback (internal/process/next_tick.js:174:19)
-[error] 
-[error] Error: Server Error. socket hang up
-[debug] [2018-07-18T14:27:39.216Z] ----------------------------------------------------------------------
-[debug] [2018-07-18T14:27:39.220Z] Command:       /usr/local/bin/node /usr/local/bin/firebase deploy
-[debug] [2018-07-18T14:27:39.220Z] CLI Version:   3.19.3
-[debug] [2018-07-18T14:27:39.220Z] Platform:      linux
-[debug] [2018-07-18T14:27:39.220Z] Node Version:  v10.0.0
-[debug] [2018-07-18T14:27:39.220Z] Time:          Wed Jul 18 2018 19:57:39 GMT+0530 (IST)
-[debug] [2018-07-18T14:27:39.220Z] ----------------------------------------------------------------------
-[debug] 
-[debug] [2018-07-18T14:27:39.263Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
-[debug] [2018-07-18T14:27:39.263Z] > authorizing via signed-in user
-[debug] [2018-07-18T14:27:39.267Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/make-photo-gallery  
-  
- Wed Jul 18 2018 19:57:39 GMT+0530 (IST)
-[debug] [2018-07-18T14:28:25.989Z] ----------------------------------------------------------------------
-[debug] [2018-07-18T14:28:25.992Z] Command:       /usr/local/bin/node /usr/local/bin/firebase deploy
-[debug] [2018-07-18T14:28:25.992Z] CLI Version:   3.19.3
-[debug] [2018-07-18T14:28:25.992Z] Platform:      linux
-[debug] [2018-07-18T14:28:25.992Z] Node Version:  v10.0.0
-[debug] [2018-07-18T14:28:25.992Z] Time:          Wed Jul 18 2018 19:58:25 GMT+0530 (IST)
-[debug] [2018-07-18T14:28:25.992Z] ----------------------------------------------------------------------
-[debug] 
-[debug] [2018-07-18T14:28:26.003Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
-[debug] [2018-07-18T14:28:26.003Z] > authorizing via signed-in user
-[debug] [2018-07-18T14:28:26.006Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/make-photo-gallery  
-  
- Wed Jul 18 2018 19:58:26 GMT+0530 (IST)
-[debug] [2018-07-18T14:29:08.849Z] <<< HTTP RESPONSE 200
-[debug] [2018-07-18T14:29:08.851Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/make-photo-gallery/tokens  
-  
- Wed Jul 18 2018 19:59:08 GMT+0530 (IST)
-[info] 
-[warn] ⚠  Your CLI authentication needs to be updated to take advantage of new features.
-[warn] ⚠  Please run firebase login --reauth
-[info] 
-[debug] [2018-07-18T14:29:28.870Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase"]
-[debug] [2018-07-18T14:29:28.871Z] > authorizing via signed-in user
-[debug] [2018-07-18T14:29:28.871Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
-[debug] [2018-07-18T14:29:28.871Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
- { refresh_token: '1/AjLOvF4jp69hhAqVsjci5QXm92EKOvah8koVH1Xybxo',
-  client_id: '563584335869-fgrhgmd47bqnekij5i8b5pr03ho849e6.apps.googleusercontent.com',
-  client_secret: 'j9iVZfS8kkCEFUPaAeJV0sAi',
-  grant_type: 'refresh_token',
-  scope: 'email https://www.googleapis.com/auth/cloudplatformprojects.readonly https://www.googleapis.com/auth/firebase openid' } 
- Wed Jul 18 2018 19:59:28 GMT+0530 (IST)
-[debug] [2018-07-19T13:14:01.512Z] ----------------------------------------------------------------------
-[debug] [2018-07-19T13:14:01.515Z] Command:       /usr/local/bin/node /usr/local/bin/firebase serve
-[debug] [2018-07-19T13:14:01.515Z] CLI Version:   3.19.3
-[debug] [2018-07-19T13:14:01.515Z] Platform:      linux
-[debug] [2018-07-19T13:14:01.515Z] Node Version:  v10.0.0
-[debug] [2018-07-19T13:14:01.515Z] Time:          Thu Jul 19 2018 18:44:01 GMT+0530 (IST)
-[debug] [2018-07-19T13:14:01.515Z] ----------------------------------------------------------------------
-[debug] 
-[debug] [2018-07-19T13:14:01.658Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
-[debug] [2018-07-19T13:14:01.658Z] > authorizing via signed-in user
-[debug] [2018-07-19T13:14:01.661Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
-[debug] [2018-07-19T13:14:01.661Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
- { refresh_token: '1/AjLOvF4jp69hhAqVsjci5QXm92EKOvah8koVH1Xybxo',
-  client_id: '563584335869-fgrhgmd47bqnekij5i8b5pr03ho849e6.apps.googleusercontent.com',
-  client_secret: 'j9iVZfS8kkCEFUPaAeJV0sAi',
-  grant_type: 'refresh_token',
-  scope: 'email https://www.googleapis.com/auth/cloud-platform https://www.googleapis.com/auth/cloudplatformprojects.readonly https://www.googleapis.com/auth/firebase openid' } 
- Thu Jul 19 2018 18:44:01 GMT+0530 (IST)
-[debug] [2018-07-19T13:14:51.828Z] <<< HTTP RESPONSE 200
-[debug] [2018-07-19T13:14:51.880Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/make-photo-gallery  
-  
- Thu Jul 19 2018 18:44:51 GMT+0530 (IST)
-[debug] [2018-07-19T13:14:53.959Z] <<< HTTP RESPONSE 200
-[debug] [2018-07-19T13:14:53.961Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/make-photo-gallery/tokens  
-  
- Thu Jul 19 2018 18:44:53 GMT+0530 (IST)
-[debug] [2018-07-19T13:14:55.378Z] <<< HTTP RESPONSE 200
-[debug] [2018-07-19T13:14:55.379Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/make-photo-gallery  
-  
- Thu Jul 19 2018 18:44:55 GMT+0530 (IST)
-[debug] [2018-07-19T13:14:57.837Z] <<< HTTP RESPONSE 200
+ Sun Jul 22 2018 16:02:07 GMT+0530 (IST)
+[debug] [2018-07-22T10:32:11.386Z] <<< HTTP RESPONSE 200
 [info] 
 [info] === Serving from '/home/himanshu/Desktop/Completeit'...
 [info] 
-[debug] [2018-07-19T13:14:57.841Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/841127452391/clients/_:getWebAppConfig  
+[debug] [2018-07-22T10:32:11.389Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/841127452391/clients/_:getWebAppConfig  
   
- Thu Jul 19 2018 18:44:57 GMT+0530 (IST)
-[debug] [2018-07-19T13:15:04.331Z] <<< HTTP RESPONSE 200
-[info] ✔  hosting: Local server: http://localhost:5000
-
-[debug] [2018-07-19T15:38:26.410Z] ----------------------------------------------------------------------
-[debug] [2018-07-19T15:38:26.414Z] Command:       /usr/local/bin/node /usr/local/bin/firebase serve
-[debug] [2018-07-19T15:38:26.416Z] CLI Version:   3.19.3
-[debug] [2018-07-19T15:38:26.416Z] Platform:      linux
-[debug] [2018-07-19T15:38:26.416Z] Node Version:  v10.0.0
-[debug] [2018-07-19T15:38:26.416Z] Time:          Thu Jul 19 2018 21:08:26 GMT+0530 (IST)
-[debug] [2018-07-19T15:38:26.416Z] ----------------------------------------------------------------------
-[debug] 
-[debug] [2018-07-19T15:38:26.569Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
-[debug] [2018-07-19T15:38:26.569Z] > authorizing via signed-in user
-[debug] [2018-07-19T15:38:26.573Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
-[debug] [2018-07-19T15:38:26.574Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
- { refresh_token: '1/AjLOvF4jp69hhAqVsjci5QXm92EKOvah8koVH1Xybxo',
-  client_id: '563584335869-fgrhgmd47bqnekij5i8b5pr03ho849e6.apps.googleusercontent.com',
-  client_secret: 'j9iVZfS8kkCEFUPaAeJV0sAi',
-  grant_type: 'refresh_token',
-  scope: 'email https://www.googleapis.com/auth/cloud-platform https://www.googleapis.com/auth/cloudplatformprojects.readonly https://www.googleapis.com/auth/firebase openid' } 
- Thu Jul 19 2018 21:08:26 GMT+0530 (IST)
-[debug] [2018-07-19T15:38:40.763Z] <<< HTTP RESPONSE 200
-[debug] [2018-07-19T15:38:40.867Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/make-photo-gallery  
-  
- Thu Jul 19 2018 21:08:40 GMT+0530 (IST)
-[debug] [2018-07-19T15:38:48.880Z] <<< HTTP RESPONSE 200
-[debug] [2018-07-19T15:38:48.882Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/make-photo-gallery/tokens  
-  
- Thu Jul 19 2018 21:08:48 GMT+0530 (IST)
-[debug] [2018-07-19T15:38:51.366Z] <<< HTTP RESPONSE 200
-[debug] [2018-07-19T15:38:51.367Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/make-photo-gallery  
-  
- Thu Jul 19 2018 21:08:51 GMT+0530 (IST)
-[debug] [2018-07-19T15:38:55.809Z] <<< HTTP RESPONSE 200
-[info] 
-[info] === Serving from '/home/himanshu/Desktop/Completeit'...
-[info] 
-[debug] [2018-07-19T15:38:55.812Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/841127452391/clients/_:getWebAppConfig  
-  
- Thu Jul 19 2018 21:08:55 GMT+0530 (IST)
-[debug] [2018-07-19T15:39:07.508Z] <<< HTTP RESPONSE 200
+ Sun Jul 22 2018 16:02:11 GMT+0530 (IST)
+[debug] [2018-07-22T10:32:17.192Z] <<< HTTP RESPONSE 200
 [info] ✔  hosting: Local server: http://localhost:5000
 

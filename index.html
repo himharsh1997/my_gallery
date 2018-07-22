@@ -12,14 +12,14 @@
     <link href="dist/css/index.css" rel="stylesheet" type="text/css">
 </head>
 
-<body style="background-image: url('dist/img/luis.jpg');background-repeat: no-repeat;background-size: 100%;">
-    <nav class="w-100 bg-light border-bottom border-info d-flex flex-row">
+<body>
+    <nav class=" bg-light border-bottom border-info d-flex flex-row">
         <div class="w-25  rounded">
             <p class="font-weight-bold mt-auto mb-auto w-50 ml-auto mr-auto text-info " style="font-family: 'Merienda', cursive; font-size: 30px;">PGalras</p>
         </div>
-        <div id="form" class="d-flex flex-row ml-auto mr-4">
-            <p class="mt-1 mb-1 btn btn-info mr-auto ml-auto" onclick="change('sup')">Signup</p>
-            <p class="mt-1 mb-1 btn btn-dark border-left border-secondary ml-auto mr-auto" onclick="change('lin')">Login</p>
+        <div class="w-75 h-100 mt-auto mb-auto">
+            <button class=" btn btn-info mr-4 float-right" onclick="change('sup')">Signup</button>
+            <button class=" btn btn-dark mr-1  float-right" onclick="change('lin')">Login</button>
         </div>
     </nav>
 
@@ -41,8 +41,8 @@
                 <input id="emailid" type="text" name="" value="" class="form-control " placeholder="EmailID">
                 <p id="errem" style="font-size: 12px;color: rgb(255, 8, 0);opacity: 0.6;"></p>
                 <div class="d-flex flex-row">
-                    <input id="Password" type="password" name="" value="" class="form-control wi_45" placeholder="Password">
-                    <input id="RPassword" type="password" name="" value="" class="form-control wi_45   ml-auto" placeholder="Retype password">
+                    <input id="Password" type="password" name="" value="" class="form-control wi_45" placeholder="Minimum 6 character password">
+                    <input id="RPassword" type="password" name="" value="" class="form-control wi_45   ml-auto" placeholder="Minimum 6 character password">
                 </div>
                 <p id="errpass" style="font-size: 12px;color: rgb(255, 8, 0);opacity: 0.6;"></p>
                 <button type="" class="btn btn-info" onclick="signup()"> Signup</button>
@@ -55,8 +55,8 @@
             </div>
             <div class="mt-2 w-50 d-flex flex-column text-dark ml-auto mr-auto mt-3 mb-3">
 
-                <button class="btn btn-light border font-weight-bold text-danger border-danger"> <i class="fab fa-google ml-auto mr-auto text-danger bg-light" style="font-size: 20px;"></i> Google</button>
-                <button class="btn btn-light border font-weight-bold text-info border-primary mt-1"> <i class="fab fa-facebook ml-auto mr-auto text-info"></i> Facebook</button>
+                <button class="btn  border font-weight-bold btn-danger text-light border-danger"> <i class="fab fa-google float-left text-light bg-danger ml-1" style="font-size: 20px;"></i> Google</button>
+                <button class="btn btn-info border font-weight-bold text-light border-primary mt-1"> <i class="fab fa-facebook float-left text-light"></i> Facebook</button>
             </div>
 
         </div>
@@ -77,28 +77,26 @@
 
             </div>
             <div class="mt-2 w-50 d-flex flex-column text-dark ml-auto mr-auto mb-3 mt-3">
-
-                <button class="btn btn-light border font-weight-bold text-danger border-danger"> <i class="fab fa-google ml-auto mr-auto text-danger bg-light" style="font-size: 20px;"></i> Google</button>
-                <button class="btn btn-light border font-weight-bold text-info border-primary mt-1"> <i class="fab fa-facebook ml-auto mr-auto text-info"></i> Facebook</button>
+                <button class="btn  border font-weight-bold btn-danger text-light border-danger"> <i class="fab fa-google float-left text-light bg-danger ml-1" style="font-size: 20px;"></i> Google</button>
+                <button class="btn btn-info border font-weight-bold text-light border-primary mt-1"> <i class="fab fa-facebook float-left text-light"></i> Facebook</button>
             </div>
         </div>
     </section>
 
 
-    <footer class="w-100 bg-dark border-top border-info">
-        <div class="w-100 d-flex flex-row ml-auto mr-auto text-light container mt-2">
+    <footer class="w-100 bg-dark border-top border-info d-flex flex-column">
+        <div class="w-25 d-flex flex-row ml-auto mr-auto text-light container mt-2">
             <p class="ml-auto mr-auto">Contact us on</p>
 
         </div>
         <div id="icons" class="centerme d-flex flex-row ml-auto mr-auto mt-auto mb-auto text-light">
-            <i class="fab fa-facebook-square ml-auto mr-auto"></i>
-            <i class="fab fa-linkedin  ml-auto mr-auto"></i>
-            <i class="fab fa-github-square  ml-auto mr-auto"></i>
-            <i class="fab fa-twitter-square  ml-auto mr-auto"></i>
-
+            <i class="fab fa-facebook-square ml-auto mr-auto poin"></i>
+            <i class="fab fa-linkedin  ml-auto mr-auto poin"></i>
+            <i class="fab fa-github-square  ml-auto mr-auto poin"></i>
+            <i class="fab fa-twitter-square  ml-auto mr-auto poin"></i>
         </div>
-        <div class=" d-flex flex-row ml-auto mr-auto mt-auto mb-auto text-light container">
-            <p class="ml-auto mr-auto">Copyrights: Himanshu Joshi</p>
+        <div class=" d-flex flex-row ml-auto mr-auto text-light mt-2">
+            <p class="text-center" style="font-size: 15px;">Copyrights: Himanshu Joshi</p>
         </div>
 
     </footer>

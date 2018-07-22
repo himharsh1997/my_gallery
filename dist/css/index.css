@@ -12,6 +12,10 @@ footer {
     top: 1;
 }
 
+.poin {
+    cursor: pointer;
+}
+
 i {
     font-size: 25px;
 }
@@ -29,7 +33,6 @@ i {
 }
 
 .pl::placeholder {
-    color: red;
     opacity: 0.5;
     font-size: 14px;
 }
