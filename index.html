@@ -55,8 +55,8 @@
             </div>
             <div class="mt-2 w-50 d-flex flex-column text-dark ml-auto mr-auto mt-3 mb-3">
 
-                <button class="btn  border font-weight-bold btn-danger text-light border-danger"> <i class="fab fa-google float-left text-light bg-danger ml-1" style="font-size: 20px;"></i> Google</button>
-                <button class="btn btn-info border font-weight-bold text-light border-primary mt-1"> <i class="fab fa-facebook float-left text-light"></i> Facebook</button>
+                <button class="btn  border font-weight-bold btn-danger text-light border-danger" onclick="googlego()"> <i class="fab fa-google float-left text-light bg-danger ml-1 mt-auto mb-auto" style="font-size: 20px;"></i> Google</button>
+                <button class="btn btn-info border font-weight-bold text-light border-primary mt-1" onclick="facebookgo()"> <i class="fab fa-facebook float-left text-light"></i> Facebook</button>
             </div>
 
         </div>
@@ -110,6 +110,34 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
 
+
+    <!-- HTTPS required. HTTP will give a 403 forbidden response -->
+    <script src="https://sdk.accountkit.com/en_US/sdk.js"></script>
+    <script>
+        // initialize Account Kit with CSRF protection
+        AccountKit_OnInteractive = function() {
+            AccountKit.init({
+                appId: "282248262324062",
+                state: "{{csrf}}",
+                version: "v1.0",
+                fbAppEventsEnabled: true,
+                redirect: "https://make-photo-gallery.firebaseapp.com/__/auth/handler"
+            });
+        };
+
+        // login callback
+        function loginCallback(response) {
+            if (response.status === "PARTIALLY_AUTHENTICATED") {
+                var code = response.code;
+                var csrf = response.state;
+                // Send code to server to exchange for access token
+            } else if (response.status === "NOT_AUTHENTICATED") {
+                // handle authentication failure
+            } else if (response.status === "BAD_PARAMS") {
+                // handle bad parameters
+            }
+        }
+    </script>
     <script src="dist/js/index.js" charset="utf-8">
     </script>
 </body>

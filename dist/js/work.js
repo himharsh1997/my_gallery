@@ -11,6 +11,7 @@ firebase.initializeApp(config);
 
 firebase.auth().onAuthStateChanged((user) => {
 
+    console.log(user);
     if (user) {
         window.location.href = "work.html"
     } else {
