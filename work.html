@@ -1,29 +1,40 @@
-<<!DOCTYPE html>
-    <html>
+<!DOCTYPE html>
+<html>
 
-    <head>
-        <meta charset="utf-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Page Title</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" type="text/css" media="screen" href="dist/css/work.css" />
-        <script src="main.js"></script>
-    </head>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Great+Vibes" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Merienda" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" media="screen" href="dist/css/work.css" />
 
-    <body>
-        <nav class="w-100 bg-info border-bottom rounded h-100">
-            <div class="float-left">
+</head>
 
-            </div>
-            <div id="search" class=" d-flex flex-row ml-auto mr-auto">
-                <label id="" class="d-flex flex-row  bg-light rounded mt-1 mb-1">
+<body>
+    <nav class="w-100 bg-info border-bottom rounded h-100 d-flex flex-row">
+        <div class="float-left">
+
+        </div>
+        <div id="search" class=" d-flex flex-row ml-auto mr-auto">
+            <label id="" class="d-flex flex-row  bg-light rounded mt-1 mb-1">
                  
                    <input id="search_i" type="text" name="" value="" class="w-0 form-control border-left">
                    <i id="se_icon" class="fa fa-search mt-auto mb-auto ml-auto mr-auto container text-secondary"></i>
                </label>
 
-            </div>
-        </nav>
-    </body>
+        </div>
+        <button class="float-right btn btn-primary mt-auto mb-auto" onclick="logout()">Logout</button>
+    </nav>
+    <p class="text-primary font-eight-bold ml-auto mr-auto w-25">Welcome to user page</p>
+    <script src="https://www.gstatic.com/firebasejs/5.2.0/firebase.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+    <script src="dist/js/work.js"></script>
+</body>
 
-    </html>
+</html>
