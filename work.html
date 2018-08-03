@@ -15,22 +15,48 @@
 </head>
 
 <body>
-    <nav class="w-100 bg-info border-bottom rounded h-100 d-flex flex-row">
-        <div class="float-left">
+    <nav class=" w-100 border-bottom rounded h-100 d-flex flex-row">
 
+        <div class="w-25  rounded">
+            <p class="font-weight-bold mt-auto mb-auto w-50 ml-auto mr-auto text-info " style="font-family: 'Merienda', cursive; font-size: 30px;">PGalras</p>
         </div>
+
         <div id="search" class=" d-flex flex-row ml-auto mr-auto">
-            <label id="" class="d-flex flex-row  bg-light rounded mt-1 mb-1">
+            <label id="" class="d-flex flex-row  bg-light rounded mt-1 mb-1 border">
                  
                    <input id="search_i" type="text" name="" value="" class="w-0 form-control border-left">
                    <i id="se_icon" class="fa fa-search mt-auto mb-auto ml-auto mr-auto container text-secondary"></i>
                </label>
 
         </div>
-        <button class="float-right btn btn-primary mt-auto mb-auto" onclick="logout()">Logout</button>
+        <div class="w-25  rounded d-flex flex-row">
+
+            <div class="dropdown">
+                <img src="" id="profile_pic" alt="profile_pic" style="height: 40px;width: 40px;border-radius:50%;" id="dropdownMenuButton" class="img-circle font-weight-bold dropdown-toggle mt-1 mb-1 ml-auto mr-auto text-info " data-toggle="dropdown" aria-haspopup="true"
+                    aria-expanded="false">
+
+
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    <a class="dropdown-item" href="#"> <img src="" id="profile_pic1" alt="profile_pic" style="height: 40px;width: 40px;border-radius:50%;" class="img-circle font-weight-bold  mt-1 mb-1 ml-auto mr-auto text-info " 
+                       >
+    </a>
+                    <a class="dropdown-item">Settings</a>
+                    <a class="dropdown-item" onclick="logout()">Logout</a>
+                </div>
+            </div>
+
+        </div>
+
     </nav>
-    <p class="text-primary font-eight-bold ml-auto mr-auto w-25">Welcome to user page</p>
-    <script src="https://www.gstatic.com/firebasejs/5.2.0/firebase.js"></script>
+    <p id="userd" class="text-primary font-eight-bold ml-auto mr-auto w-25"></p>
+    <section>
+        <div id="Profile_show" class="card">
+
+        </div>
+        <div id="update">
+        </div>
+    </section>
+    <script src="https://www.gstatic.com/firebasejs/5.3.0/firebase.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>

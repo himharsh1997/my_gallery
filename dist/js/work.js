@@ -13,7 +13,10 @@ firebase.auth().onAuthStateChanged((user) => {
 
     console.log(user);
     if (user) {
-        window.location.href = "work.html"
+        console.log(user.providerData[0]);
+        document.getElementById("userd").innerHTML = "Hi! Welcome " + user.providerData[0].displayName + " having emailid" + user.providerData[0].email + " in PGalras"
+        document.getElementById("profile_pic").src = user.providerData[0].photoURL
+        document.getElementById("profile_pic1").src = user.providerData[0].photoURL
     } else {
         window.location.href = "index.html"
     }

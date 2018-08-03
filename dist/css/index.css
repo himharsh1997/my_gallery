@@ -2,6 +2,14 @@ div#form {
     width: 12%;
 }
 
+div.widd {
+    width: 50%;
+}
+
+div.wi25 {
+    width: 25%;
+}
+
 body {
     background-image: url('dist/img/index.jpg');
 }
@@ -58,4 +66,52 @@ div.mauto {
     transform: scaleX(1);
     transition: 1.3s ease;
     box-shadow: 10px 5px 10px 0 rgb(201, 194, 194);
+}
+
+@media screen and (min-width:700px) and (max-width:1000px) {
+    .centerme {
+        width: 20%;
+    }
+}
+
+@media screen and (min-width:500px) and (max-width:790px) {
+    div.widd {
+        width: 75%;
+    }
+    div.centerme {
+        width: 25%;
+    }
+}
+
+@media screen and (max-width:500px) {
+    div.widd {
+        width: 100%;
+    }
+}
+
+@media screen and (min-width:400px) and (max-width:500px) {
+    div.widd {
+        width: 100%;
+    }
+    div.centerme {
+        width: 40%;
+    }
+}
+
+@media screen and (min-width:300px) and (max-width:399px) {
+    div.widd {
+        width: 100%;
+    }
+    div.centerme {
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 299px) {
+    div.widd {
+        width: 100%;
+    }
+    div.centerme {
+        width: 60%;
+    }
 }

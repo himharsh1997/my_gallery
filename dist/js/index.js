@@ -1,4 +1,3 @@
-// Initialize Firebase
 var config = {
     apiKey: "AIzaSyCHsgMEAFaLVfYIh8G--ePjhFE6SGGZ8o8",
     authDomain: "make-photo-gallery.firebaseapp.com",
@@ -9,15 +8,15 @@ var config = {
 };
 firebase.initializeApp(config);
 
+
 firebase.auth().onAuthStateChanged((user) => {
 
     if (user) {
         window.location.href = "work.html"
-    } else {
-
-    }
+    } else {}
 
 });
+var database = firebase.database();
 var fn = document.getElementById('first_name');
 var ln = document.getElementById('last_name');
 var eid = document.getElementById('emailid')
@@ -34,8 +33,32 @@ gprovider.setCustomParameters({
 fprovider.setCustomParameters({
     'display': 'popup'
 });
+// initialize Account Kit with CSRF protection
+AccountKit_OnInteractive = function() {
+    AccountKit.init({
+        appId: "282248262324062",
+        state: "{{csrf}}",
+        version: "v1.0",
+        fbAppEventsEnabled: true,
+        redirect: "https://make-photo-gallery.firebaseapp.com/__/auth/handler"
+    });
+};
+
+// login callback
+function loginCallback(response) {
+    if (response.status === "PARTIALLY_AUTHENTICATED") {
+        var code = response.code;
+        var csrf = response.state;
+        // Send code to server to exchange for access token
+    } else if (response.status === "NOT_AUTHENTICATED") {
+        // handle authentication failure
+    } else if (response.status === "BAD_PARAMS") {
+        // handle bad parameters
+    }
+}
 
 function change(x) {
+
     var p = x.toString();
     if (p == "sup") {
         document.getElementById('signup').classList.add('mauto');
@@ -73,8 +96,23 @@ signup = () => {
 
                         if (rpass.value.toString().length != 0 && pass.value.toString().length != 0) {
                             if (rpass.value.toString() == pass.value.toString()) {
-                                firebase.auth().createUserWithEmailAndPassword(eid.value.toString(), pass.value.toString()).then(() => {
-                                    firebase.database().ref().
+                                firebase.auth().createUserWithEmailAndPassword(eid.value.toString(), pass.value.toString()).then((user) => {
+                                    // signup data start
+                                    let data = {
+                                        "name": fn.value.toString() + " " + ln.value.toString(),
+                                        "email": eid.value.toString(),
+                                        "photoURL": ""
+
+                                    }
+
+
+
+                                    var updates = {};
+                                    updates['/users/' + firebase.auth().currentUser.uid + '/'] = data;
+
+
+                                    firebase.database().ref().update(updates);
+                                    // signup data gone
                                     fn.value = "";
                                     ln.value = '';
                                     eid.value = '';
@@ -171,6 +209,18 @@ facebookgo = () => {
         var email = error.email;
         // The firebase.auth.AuthCredential type that was used.
         var credential = error.credential;
+        // ...
+    });
+}
+signin = () => {
+    var email = document.getElementById("email_login");
+    var password = document.getElementById("password_login");
+    firebase.auth().signInWithEmailAndPassword(email.value, password.value).then(() => {
+        console.log("Successfully login");
+    }).catch(function(error) {
+        // Handle Errors here.
+        var errorCode = error.code;
+        var errorMessage = error.message;
         // ...
     });
 }
